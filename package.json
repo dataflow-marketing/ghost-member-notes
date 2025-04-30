@@ -1,0 +1,35 @@
+{
+  "name": "ghost-member-notes",
+  "version": "1.0.0",
+  "description": "used to get Ghost Member notes in YAML and return payload of values",
+  "type": "module",
+  "main": "src/app.js",
+  "scripts": {
+    "build": "esbuild src/app.ts --sourcemap --platform=neutral --packages=external --bundle --outfile=dist/app.js --watch",
+    "build:watch": "concurrently \"yarn build --watch\" \"node --watch dist/app.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dataflow-marketing/ghost-member-notes.git"
+  },
+  "author": "mattcam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dataflow-marketing/ghost-member-notes/issues"
+  },
+  "homepage": "https://github.com/dataflow-marketing/ghost-member-notes#readme",
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "concurrently": "^9.1.2",
+    "esbuild": "^0.24.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.14.1",
+    "@tryghost/admin-api": "^1.13.13",
+    "dotenv": "^16.5.0",
+    "hono": "^4.7.8",
+    "import": "^0.0.6",
+    "js-yaml": "^4.1.0"
+  }
+}
